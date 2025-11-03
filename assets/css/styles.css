@@ -136,8 +136,7 @@ ul {
   font-weight: 800;
 }
 .rm-header .rm-logo img {
-  width: 40px;
-  height: 40px;
+  height: clamp(44px, 8vw, 80px);
   object-fit: cover;
   border-radius: 18px;
   border: 2px solid rgba(255, 255, 255, 0.25);
@@ -146,6 +145,7 @@ ul {
   letter-spacing: 0.2px;
 }
 .rm-header .rm-logo span b {
+  font-size: clamp(14px, 2.4vw, 18px);
   color: #f1c644;
 }
 .rm-header .rm-nav {
@@ -621,3 +621,5 @@ ul {
     width: 100%;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */

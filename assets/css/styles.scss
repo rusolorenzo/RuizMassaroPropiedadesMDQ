@@ -107,8 +107,8 @@ ul { list-style: none; }
 
   .rm-logo {
     display: inline-flex; align-items: center; gap: 12px; font-weight: 800;
-    img { width: 40px; height: 40px; object-fit: cover; @include radius; border: 2px solid rgba(255,255,255,.25); }
-    span { letter-spacing: .2px; b { color: $gold-500; } }
+    img { height: clamp(44px, 8vw, 80px); object-fit: cover; @include radius; border: 2px solid rgba(255,255,255,.25); }
+    span { letter-spacing: .2px; b { font-size: clamp(14px, 2.4vw, 18px); color: $gold-500; } }
   }
 
   .rm-nav {
