@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="assets/css/styles.css" as="style" />
 <link rel="stylesheet" href="assets/css/styles.css" />
+<script src="assets/js/form-evaluacion.js" defer></script>
+
 </head>
 <body>
     <!-- ===== HEADER / NAV ===== -->
@@ -199,7 +201,11 @@
             <h2>¿Listo para un servicio <span>premium</span> de verdad?</h2>
             <p>Dejanos tus datos y te contactamos para evaluar tu propiedad.</p>
         </div>
-        <form class="rm-form reveal-up delay-1" action="#" method="post" novalidate>
+    <form id="frm-evaluacion"
+        class="rm-form reveal-up delay-1"
+        action="https://formspree.io/f/myzbqvwg"
+        method="POST" novalidate>
+
             <div class="grid">
             <label class="field">
                 <span>Nombre y apellido</span>
@@ -222,6 +228,11 @@
                 <textarea name="mensaje" rows="4" placeholder="Contanos qué necesitás"></textarea>
             </label>
             </div>
+            <input type="hidden" name="_subject" value="Nueva evaluación desde la web">
+            <input type="hidden" name="plan" id="frm-plan" value="">
+            <!-- Honeypot anti-spam -->
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
+
             <div class="rm-form__actions">
             <button class="btn btn--primary" type="submit">Quiero una evaluación</button>
             <button class="btn btn--ghost" type="reset">Limpiar</button>
